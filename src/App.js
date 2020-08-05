@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import MainView from "./components/mainView/mainview"
-import Sidebar from './components/sidebar/sidebar';
-import SecondView from './components/secondView/secondView';
+import MainView from "./components/MainView/MainView"
+import Sidebar from './components/Sidebar/Sidebar';
+import SecondView from './components/SecondView/SecondView';
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
-    <div className="sideBar col-2">
+    <div className="SideBar col-2">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">
