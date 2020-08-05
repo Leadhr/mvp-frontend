@@ -1,3 +1,7 @@
 export default function Head() {
-    return null;
+    return (
+        <div className="head">
+            <p>im head</p>
+        </div>
+    )
 }
