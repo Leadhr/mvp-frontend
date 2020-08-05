@@ -1,9 +1,11 @@
 import React from "react";
+import Logo from "../Logo/Logo"
 import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
     <div className="SideBar col-2">
+      <Logo />
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">
