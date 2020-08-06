@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Blurb() {
+export default function HeadBlurb() {
   return (
-    <div className="Blurb">
+    <div className="HeadBlurb">
       <p>
         Visualize your company's culture to verbalize areas to celebrate and
         pinpoint areas to focus on.

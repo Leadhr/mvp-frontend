@@ -8,24 +8,24 @@ export default function Sidebar() {
       <Logo />
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link active" href="/">
             Active
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/">
             Link
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/">
             Link
           </a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link disabled"
-            href="#"
+            href="/"
             tabindex="-1"
             aria-disabled="true"
           >
