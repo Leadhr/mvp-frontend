@@ -8,13 +8,13 @@ export default function HeadNav() {
           Company
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">
+      <li className="nav-item">
+        <a className="nav-link" href="/">
           Team
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">
+      <li className="nav-item">
+        <a className="nav-link" href="/">
           Individuals
         </a>
       </li>
