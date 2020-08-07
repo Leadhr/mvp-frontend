@@ -1,14 +1,15 @@
-import React from 'react';
-import MainView from "../MainView/MainView"
-import SecondView from "../SecondView/SecondView"
+import React from "react";
+import ReferenceText from "../ReferenceText/ReferenceText";
 
 export default function ReferenceView(props) {
-    return (
+  return (
+    <div className="MainView col">
+      <div className="row">
         <div className="MainView col">
-          <div className="row">
-            <MainView context="reference"/>
-            <SecondView context="reference"/>
-          </div>
+          <ReferenceText />
         </div>
-      );
+        <div className="SecondView col"></div>
+      </div>
+    </div>
+  );
 }
