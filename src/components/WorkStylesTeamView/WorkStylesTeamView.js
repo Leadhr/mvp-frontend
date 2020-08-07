@@ -1,13 +1,24 @@
 import React from "react";
-import MainView from "../MainView/MainView";
-import SecondView from "../SecondView/SecondView";
+import Head from "../Head/Head";
+import Viz from "../Viz/Viz";
+import Avatar from "../Avatar/Avatar";
+import Search from "../Search/Search";
+
+import TeamWrapper from "../TeamWrapper/TeamWrapper"
 
 export default function WorkStylesTeamView() {
   return (
     <div className="WorkStylesTeamView col">
       <div className="row">
-        <MainView context="workstylesteam" />
-        <SecondView context="workstylesteam" />
+        <div className="MainView col">
+          <Head />
+          <Viz />
+        </div>
+        <div className="SecondView col">
+          <Avatar />
+          <Search />
+          <TeamWrapper />
+        </div>
       </div>
     </div>
   );
