@@ -1,18 +1,22 @@
-import React from 'react';
-import './App.css';
-import MainView from "./components/MainView/MainView"
-import Sidebar from './components/Sidebar/Sidebar';
-import SecondView from './components/SecondView/SecondView';
+import React from "react";
+import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CultureView from "./components/CultureView/CultureView";
 
 function App() {
   return (
-    <div className="App container-fluid">
-      <div className="row">
-      <Sidebar />
-      <MainView />
-      <SecondView />
+    <Router>
+      <div className="App container-fluid">
+        <div className="d-flex row">
+          <Sidebar />
+          <Switch>
+            <Route path="/" exact component={CultureView}></Route>
+            <Route path="/culture" component={CultureView}></Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
