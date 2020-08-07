@@ -6,27 +6,27 @@ export default function Sidebar() {
   return (
     <div className="SideBar col-2">
       <Logo />
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">
+      <ul className="nav flex-column">
+        <li className="nav-item">
+          <a className="nav-link active" href="/">
             Active
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">
+        <li className="nav-item">
+          <a className="nav-link" href="/">
             Link
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">
+        <li className="nav-item">
+          <a className="nav-link" href="/">
             Link
           </a>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <a
-            class="nav-link disabled"
+            className="nav-link disabled"
             href="/"
-            tabindex="-1"
+            tabIndex="-1"
             aria-disabled="true"
           >
             Disabled
