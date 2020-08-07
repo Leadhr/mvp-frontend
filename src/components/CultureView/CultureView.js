@@ -1,13 +1,17 @@
 import React from "react";
-import MainView from "../MainView/MainView";
-import SecondView from "../SecondView/SecondView";
+import Viz from "../Viz/Viz"
+import CultureBox from "../CultureBox/CultureBox"
 
 export default function CultureView() {
   return (
     <div className="CultureView col">
       <div className="row">
-        <MainView context="culture"/>
-        <SecondView context="culture"/>
+        <div className="MainView col">
+          <Viz />
+        </div>
+        <div className="SecondView col">
+          <CultureBox />
+        </div>
       </div>
     </div>
   );
