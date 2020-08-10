@@ -1,9 +1,9 @@
 .MainView  {
     height: 100vh;
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
 }
 
 .SecondView {
     height: 100vh;
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
 }
