@@ -3,7 +3,7 @@ import React from "react";
 export default function ReferenceText() {
   return (
     <div className="ReferenceText">
-      <h1>I'm ReferenceText</h1>
+      <h1>heading</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
