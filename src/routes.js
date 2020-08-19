@@ -19,10 +19,12 @@ import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 import Register from "views/examples/Register.js";
-import Surveywrapper from "views/survey/surveywrapper/surveywrapper.js"
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import Culture from "views/Culture.js"
+import MyTeam from "views/MyTeam";
+import Candidates from "views/Candidates";
 
 var routes = [
   {
@@ -33,10 +35,24 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/icons",
-    name: "Icons",
+    path: "/culture",
+    name: "Culture",
     icon: "ni ni-planet text-blue",
-    component: Icons,
+    component: Culture,
+    layout: "/admin"
+  },
+  {
+    path: "/myteam",
+    name: "MyTeam",
+    icon: "ni ni-planet text-blue",
+    component: MyTeam,
+    layout: "/admin"
+  },
+  {
+    path: "/candidates",
+    name: "Candidates",
+    icon: "ni ni-planet text-blue",
+    component: Candidates,
     layout: "/admin"
   },
   {
@@ -73,13 +89,6 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth"
-  },
-  {
-    path: "/survey",
-    name: "Survey",
-    icon: "ni ni-circle-08 text-pink",
-    component: Surveywrapper,
-    layout: "/admin"
   }
 ];
 export default routes;
