@@ -19,6 +19,7 @@ import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 import Register from "views/examples/Register.js";
+import Surveywrapper from "views/survey/surveywrapper/surveywrapper.js"
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
@@ -72,6 +73,13 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth"
+  },
+  {
+    path: "/survey",
+    name: "Survey",
+    icon: "ni ni-circle-08 text-pink",
+    component: Surveywrapper,
+    layout: "/admin"
   }
 ];
 export default routes;
