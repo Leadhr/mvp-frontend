@@ -2,7 +2,7 @@ import React from "react";
 
 import { Radar } from "react-chartjs-2";
 import Header from "components/Headers/Header.js";
-import { Col, Container, Row } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 function Culture(props) {
     const data = {
