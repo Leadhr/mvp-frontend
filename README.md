@@ -251,3 +251,10 @@ Facebook: <https://www.facebook.com/CreativeTim?ref=creativetim>
 Dribbble: <https://dribbble.com/creativetim?ref=creativetim>
 
 Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=creativetim>
+
+
+Docker usage:
+
+sudo docker build -t front-end .
+
+sudo docker run -it -p 3000:3000 front-end:latest
