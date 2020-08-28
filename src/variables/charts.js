@@ -253,16 +253,16 @@ function chartOptions() {
   // yAxes
   Chart.scaleService.updateScaleDefaults("linear", {
     gridLines: {
-      borderDash: [2],
-      borderDashOffset: [2],
+      // borderDash: [2],
+      // borderDashOffset: [2],
       color: mode === "dark" ? colors.gray[900] : colors.gray[300],
       drawBorder: false,
       drawTicks: false,
       lineWidth: 0,
-      zeroLineWidth: 0,
+      zeroLineWidth: 0.5,
       zeroLineColor: mode === "dark" ? colors.gray[900] : colors.gray[300],
-      zeroLineBorderDash: [2],
-      zeroLineBorderDashOffset: [2]
+      // zeroLineBorderDash: [2],
+      // zeroLineBorderDashOffset: [2]
     },
     ticks: {
       beginAtZero: true,
