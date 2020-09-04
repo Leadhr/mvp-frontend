@@ -23,6 +23,7 @@ import MyTeam from "views/MyTeam";
 import Candidates from "views/Candidates";
 import Reference from "views/Reference";
 import WorkStyles from "views/WorkStyles";
+import Survey from "views/Survey";
 
 var routes = [
   {
@@ -67,7 +68,13 @@ var routes = [
     component: Reference,
     layout: "/admin",
   },
-
+  {
+    path: "/survey",
+    name: "Survey",
+    icon: "ni ni-books text-blue",
+    component: Survey,
+    layout: "/admin"
+  },
   {
     path: "/login",
     name: "Login",
