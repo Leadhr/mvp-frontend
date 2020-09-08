@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Answer from "../answer/answer";
-import "./answerbox.css";
 import { Row } from "reactstrap";
 
 function Answerbox(props) {

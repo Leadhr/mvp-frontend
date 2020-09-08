@@ -1,6 +1,5 @@
 import React from "react";
 import {Button } from "reactstrap"
-import "./answer.css";
 
 function Answer(props) {
   function handleClick(e) {
