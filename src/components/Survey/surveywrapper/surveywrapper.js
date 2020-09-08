@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Card, Progress, Row } from "reactstrap";
 import Survey from "../survey/survey";
 import Submission from "../submission/submission";
 
@@ -60,14 +61,20 @@ function Surveywrapper() {
   if (!complete) {
     return (
       <div className="container-fluid">
-        <div className="row d-flex justify-content-center">
-          <Survey
-            setAnswer={handleSetAnswer}
-            setCurrent={handleSetCurrent}
-            current={current}
-            question={questionBank[Math.floor(current / 2)]}
-          />
-        </div>
+        <Row className="d-flex justify-content-center">
+          <Card>
+            <Survey
+              setAnswer={handleSetAnswer}
+              setCurrent={handleSetCurrent}
+              current={current}
+              question={questionBank[Math.floor(current / 2)]}
+            />
+            <div>
+              <br />
+              <Progress max="112" value={current} color="info" />
+            </div>
+          </Card>
+        </Row>
       </div>
     );
   } else {
