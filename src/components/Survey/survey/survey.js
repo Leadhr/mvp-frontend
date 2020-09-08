@@ -12,7 +12,7 @@ function Survey(props) {
   // } 
   if (props.question) {
     return (
-      <Card className="col-md-auto justify-content-center">
+      <Card className="bg-default col-md-auto justify-content-center">
         <Prompt current={props.current} question={props.question} />
         <Answerbox setAnswer={props.setAnswer} setCurrent={props.setCurrent} current={props.current} answers={props.question.answers} />
       </Card>
