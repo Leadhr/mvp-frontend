@@ -64,6 +64,7 @@ function Surveywrapper() {
         <Row className="d-flex justify-content-center">
           <Card>
             <Survey
+              answerBank={answerBank}
               setAnswer={handleSetAnswer}
               setCurrent={handleSetCurrent}
               current={current}

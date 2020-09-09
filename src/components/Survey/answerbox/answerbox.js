@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Answer from "../answer/answer";
-import { Row } from "reactstrap";
+import { Button, Row } from "reactstrap";
 
 function Answerbox(props) {
   const [hidden, setHidden] = useState(4);
@@ -16,6 +16,12 @@ function Answerbox(props) {
     } else if (arg === false) {
       setHidden(false);
     }
+  }
+
+  function handleBack(e) {
+    props.setCurrent(props.current - 1)
+
+    // if an answer should be hidden, hide it
   }
 
   if (props.answers) {
@@ -65,9 +71,15 @@ function Answerbox(props) {
                 answer={props.answers[2].text}
               />
             </Row>
+            
           </>
         ) : null}
+        <br/>
+      <Row>
+        <Button onClick={handleBack}> <i className="ni ni-bold-left mr-2" /> Back</Button>
+      </Row>
       </ul>
+      
     );
   } else {
     return null;
