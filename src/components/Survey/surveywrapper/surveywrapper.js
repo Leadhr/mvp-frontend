@@ -7,13 +7,13 @@ function Surveywrapper() {
   const [complete, setComplete] = useState(false);
   const [questionBank, setQuestionBank] = useState([]);
   const [answerBank, setAnswerBank] = useState(Array(112).fill(null));
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(-2);
   //holds response data from submission attempt
   const [submitData, setSubmitData] = useState([]);
 
   //reset survey
   function resetSurvey() {
-    setCurrent(0);
+    setCurrent(-2);
     setAnswerBank(Array(112).fill(null));
     setComplete(false);
   }
