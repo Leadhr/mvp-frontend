@@ -19,9 +19,14 @@ function Answerbox(props) {
   }
 
   function handleBack(e) {
-    props.setCurrent(props.current - 1)
-
-    // if an answer should be hidden, hide it
+    // if an answer should be hidden, hide it and then go back
+    console.log(props.current);
+    if (props.current % 2 === 0) {
+      setHidden(props.answerBank[props.current - 2]);
+    } else {
+      setHidden(false);
+    }
+    props.setCurrent(props.current - 1);
   }
 
   if (props.answers) {
@@ -71,15 +76,16 @@ function Answerbox(props) {
                 answer={props.answers[2].text}
               />
             </Row>
-            
           </>
         ) : null}
-        <br/>
-      <Row>
-        <Button onClick={handleBack}> <i className="ni ni-bold-left mr-2" /> Back</Button>
-      </Row>
+        <br />
+        <Row>
+          <Button onClick={handleBack}>
+            {" "}
+            <i className="ni ni-bold-left mr-2" /> Back
+          </Button>
+        </Row>
       </ul>
-      
     );
   } else {
     return null;

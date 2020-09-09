@@ -6,7 +6,7 @@ function Prompt(props) {
   if (props.question) {
     return (
       <Row className="justify-content-center">
-        <p>
+        <p id="prompt">
           {" "}
           {props.question.number}. {props.question.question}
         </p>

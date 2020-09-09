@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Prompt from "../prompt/prompt";
 import Answerbox from "../answerbox/answerbox";
-import { Button, Card, Form, FormGroup, Label, Input } from "reactstrap";
+import { Button, Card, Form, FormGroup, Label, Input, Row } from "reactstrap";
+import "./survey.css";
+
 function Survey(props) {
   const [submitToggle, setSubmitToggle] = useState(true);
 
@@ -16,7 +18,7 @@ function Survey(props) {
 
   if (props.current === -2) {
     return (
-      <Card className="bg-default col-md-auto justify-content-center">
+      <Card className=" instructions bg-default col-md-auto justify-content-center">
         <p>Welcome to the Leadhr Work Styles assessment!</p>
         <Form>
           <FormGroup check>
@@ -33,9 +35,30 @@ function Survey(props) {
     );
   } else if (props.current === -1) {
     return (
-      <Card className="bg-default col-md-auto justify-content-center">
-        <p>instructions</p>
-        <Button onClick={handleClick}>Start</Button>
+      <Card className=" instructions bg-default col-md-auto justify-content-center">
+        <Row className="justify-content-center">
+          <p>Keep these things in mind before you get started:</p>
+          <br />
+        </Row>
+        <Row className="justify-content-center">
+          <p>1) Think about how you typically behave at work</p>
+          <br />
+        </Row>
+        <Row className="justify-content-center">
+          <p>
+            2) Don't overthink it - some choices may seem odd or repetitive,
+            just pick the word or phrase that best describes you
+          </p>
+          <br />
+        </Row>
+        <Row className="justify-content-center">
+          <p>
+            3) It should take about 10 minutes to complete, so try to answer all
+            the questions in one go
+          </p>
+        </Row>
+
+        <Button onClick={handleClick}>Ok, let's go!</Button>
       </Card>
     );
   } else if (props.question) {
