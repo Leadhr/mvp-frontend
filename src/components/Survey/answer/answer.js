@@ -21,8 +21,9 @@ function Answer(props) {
   if (props.answer) {
     return (
       <Button
+        block
         onClick={handleClick}
-        className="answer d-flex justify-content-center"
+        className="answer w-75 d-flex justify-content-center"
       >
         {props.answer}
       </Button>

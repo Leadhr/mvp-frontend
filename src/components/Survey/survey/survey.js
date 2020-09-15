@@ -18,7 +18,7 @@ function Survey(props) {
 
   if (props.current === -2) {
     return (
-      <Card className=" instructions bg-default col-md-auto justify-content-center">
+      <Card style={{height: "300px"}} className=" instructions bg-default col-md-auto justify-content-center">
         <p>Welcome to the Leadhr Work Styles assessment!</p>
         <Form>
           <FormGroup check>
@@ -35,7 +35,7 @@ function Survey(props) {
     );
   } else if (props.current === -1) {
     return (
-      <Card className=" instructions bg-default col-md-auto justify-content-center">
+      <Card style={{height: "300px"}} className="instructions bg-default col-md-auto justify-content-center">
         <Row className="justify-content-center">
           <p>Keep these things in mind before you get started:</p>
           <br />
@@ -63,7 +63,7 @@ function Survey(props) {
     );
   } else if (props.question) {
     return (
-      <Card className="bg-default col-md-auto justify-content-center">
+      <Card style={{height: "300px"}} className="bg-default col-md-auto justify-content-center">
         <Prompt current={props.current} question={props.question} />
         <Answerbox
           answerBank={props.answerBank}
