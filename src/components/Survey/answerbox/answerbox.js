@@ -31,11 +31,10 @@ function Answerbox(props) {
 
   if (props.answers) {
     return (
-      <>
-      {hidden !== 0 ? (
+      <div>
+        {hidden !== 0 ? (
           <>
-            <br />
-            <Row className="">
+            <Row className="justify-content-center">
               <Answer
                 hideAnswer={hideAnswer}
                 setAnswer={props.setAnswer}
@@ -50,7 +49,6 @@ function Answerbox(props) {
 
         {hidden !== 1 ? (
           <>
-            <br />
             <Row className="justify-content-center">
               <Answer
                 hideAnswer={hideAnswer}
@@ -65,7 +63,6 @@ function Answerbox(props) {
         ) : null}
         {hidden !== 2 ? (
           <>
-            <br />
             <Row className="justify-content-center">
               <Answer
                 hideAnswer={hideAnswer}
@@ -79,13 +76,13 @@ function Answerbox(props) {
           </>
         ) : null}
         <br />
-        <Row>
+        <Row className="px-lg-5">
           <Button onClick={handleBack}>
             {" "}
             <i className="ni ni-bold-left mr-2" /> Back
           </Button>
         </Row>
-      </>
+      </div>
     );
   } else {
     return null;

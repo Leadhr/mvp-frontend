@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Card, Progress, Row } from "reactstrap";
+import { Col, Card, Progress, Row, Container } from "reactstrap";
 import Survey from "../survey/survey";
 import Submission from "../submission/submission";
 
@@ -60,8 +60,9 @@ function Surveywrapper() {
 
   if (!complete) {
     return (
-      <Row className="d-flex justify-content-center">
-          <Col sm="4">
+      <Container fluid>
+        <Row className="justify-content-center ">
+          <Col sm="5">
             <Survey
               answerBank={answerBank}
               setAnswer={handleSetAnswer}
@@ -75,6 +76,7 @@ function Surveywrapper() {
             </div>
           </Col>
         </Row>
+      </Container>
     );
   } else {
     return (

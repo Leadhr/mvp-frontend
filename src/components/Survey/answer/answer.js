@@ -23,7 +23,7 @@ function Answer(props) {
       <Button
         block
         onClick={handleClick}
-        className="answer w-75 d-flex justify-content-center"
+        className="answer w-75 d-flex justify-content-center my-1"
       >
         {props.answer}
       </Button>
