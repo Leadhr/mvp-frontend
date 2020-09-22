@@ -60,7 +60,7 @@ function Surveywrapper() {
 
   if (!complete) {
     return (
-      <Container fluid>
+      <Container style={{ height: "45vh" }}>
         <Row className="justify-content-center ">
           <Col sm="5">
             <Survey

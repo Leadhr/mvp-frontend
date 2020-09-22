@@ -10,6 +10,7 @@ import {
   Input,
   Row,
   Col,
+  Container,
 } from "reactstrap";
 import "./survey.css";
 
@@ -27,10 +28,7 @@ function Survey(props) {
 
   if (props.current === -2) {
     return (
-      <Card
-        style={{ height: "300px" }}
-        className=" instructions bg-default col-md-auto justify-content-center"
-      >
+      <Card className=" instructions bg-default col-md-auto justify-content-center">
         <Row className="justify-content-center">
           <p>Welcome to the Leadhr Work Styles assessment!</p>
         </Row>
@@ -53,10 +51,7 @@ function Survey(props) {
     );
   } else if (props.current === -1) {
     return (
-      <Card
-        style={{ height: "300px" }}
-        className="instructions bg-default col-md-auto justify-content-center"
-      >
+      <Card className="instructions bg-default col-md-auto justify-content-center">
         <Row>
           <p className="px-lg-5">
             Keep these things in mind before you get started:
@@ -89,21 +84,22 @@ function Survey(props) {
     );
   } else if (props.question) {
     return (
-      <Row className="justify-content-center">
-        <Col className="align-items-start">
-          <Card
-            style={{ height: "300px" }}
-            className="bg-default justify-content-center"
-          >
-            <Prompt current={props.current} question={props.question} />
-            <Answerbox
-              answerBank={props.answerBank}
-              setAnswer={props.setAnswer}
-              setCurrent={props.setCurrent}
-              current={props.current}
-              answers={props.question.answers}
-            />
-          </Card>
+      <Row className="align-items-start">
+        <Col>
+        <Card className="h-100 bg-default justify-content-center">
+              <Row className="justify-content-center">
+                <Prompt current={props.current} question={props.question} />
+              </Row>
+              <Row className="justify-content-center">
+                <Answerbox
+                  answerBank={props.answerBank}
+                  setAnswer={props.setAnswer}
+                  setCurrent={props.setCurrent}
+                  current={props.current}
+                  answers={props.question.answers}
+                />
+              </Row>
+            </Card>
         </Col>
       </Row>
     );
