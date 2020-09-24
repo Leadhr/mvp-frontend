@@ -36,7 +36,7 @@ function Surveywrapper() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: name, answers: answerBank }),
     };
-    fetch("http://localhost:4000/answers", requestOptions)
+    fetch("http://localhost:3001/answers", requestOptions)
       .then((response) => response.json())
       .then((data) => setSubmitData([...submitData].push(data.id)));
     setComplete(true);
@@ -50,7 +50,7 @@ function Surveywrapper() {
 
   //fetch questions
   useEffect(() => {
-    fetch("http://localhost:4000/questions")
+    fetch("http://localhost:3001/questions")
       .then((res) => res.json())
       .then((data) => {
         setQuestionBank(data);

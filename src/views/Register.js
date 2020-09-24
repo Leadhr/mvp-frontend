@@ -34,20 +34,6 @@ import {
 } from "reactstrap";
 
 function Register() {
-  const [registerUsername, setRegisterUsername] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [data, setData] = useState(null);
-  const register = () => {
-    axios({
-      method: "POST",
-      data: {
-        username: registerUsername,
-        password: registerPassword,
-      },
-      withCredentials: true,
-      url: "http://localhost:4000/register",
-    }).then((res) => setData(res.data))
-  };
 
   return (
     <>
@@ -74,7 +60,7 @@ function Register() {
                       <i className="ni ni-email-83" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Email" type="email" autoComplete="new-email" onChange={e => setRegisterUsername(e.target.value)}/>
+                  <Input placeholder="Email" type="email" autoComplete="new-email"/>
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -84,15 +70,15 @@ function Register() {
                       <i className="ni ni-lock-circle-open" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Password" type="password" autoComplete="new-password" onChange={e => setRegisterPassword(e.target.value)}/>
+                  <Input placeholder="Password" type="password" autoComplete="new-password" />
                 </InputGroup>
               </FormGroup>
-              <div className="text-muted font-italic">
+              {/* <div className="text-muted font-italic">
                 <small>
                   password strength:{" "}
                   <span className="text-success font-weight-700">strong</span>
                 </small>
-              </div>
+              </div> */}
               <Row className="my-4">
                 <Col xs="12">
                   <div className="custom-control custom-control-alternative custom-checkbox">
@@ -116,7 +102,7 @@ function Register() {
                 </Col>
               </Row>
               <div className="text-center">
-                <Button className="mt-4" color="primary" type="button" onClick={register}>
+                <Button className="mt-4" color="primary" type="button">
                   Create account
                 </Button>
               </div>

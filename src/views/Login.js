@@ -34,20 +34,6 @@ import {
 } from "reactstrap";
 
 function Login() {
-  const [loginUsername, setLoginUsername] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const [data, setData] = useState(null);
-  const login = () => {
-    axios({
-      method: "POST",
-      data: {
-        username: loginUsername,
-        password: loginPassword,
-      },
-      withCredentials: true,
-      url: "http://localhost:4000/login",
-    }).then((res) => setData(res.data))
-  };
 
   return (
     <>
@@ -66,7 +52,6 @@ function Login() {
                     placeholder="Email"
                     type="email"
                     autoComplete="new-email"
-                    onChange={(e) => setLoginUsername(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
@@ -81,7 +66,6 @@ function Login() {
                     placeholder="Password"
                     type="password"
                     autoComplete="new-password"
-                    onChange={(e) => setLoginPassword(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
@@ -99,7 +83,7 @@ function Login() {
                 </label>
               </div>
               <div className="text-center">
-                <Button className="my-4" color="primary" type="button" onClick={login}>
+                <Button className="my-4" color="primary" type="button" >
                   Sign in
                 </Button>
               </div>
