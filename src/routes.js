@@ -24,6 +24,7 @@ import Candidates from "views/Candidates";
 import Reference from "views/Reference";
 import WorkStyles from "views/WorkStyles";
 import Survey from "views/Survey";
+import withAuth from "./components/withAuth"
 
 var routes = [
   {
@@ -37,42 +38,42 @@ var routes = [
     path: "/culture",
     name: "Culture",
     icon: "ni ni-compass-04 text-blue",
-    component: Culture,
+    component: withAuth(Culture),
     layout: "/admin",
   },
   {
     path: "/workstyles",
     name: "Workstyles",
     icon: "ni ni-briefcase-24 text-blue",
-    component: WorkStyles,
+    component: withAuth(WorkStyles),
     layout: "/admin",
   },
   {
     path: "/myteam",
     name: "MyTeam",
     icon: "ni ni-circle-08 text-blue",
-    component: MyTeam,
+    component: withAuth(MyTeam),
     layout: "/admin",
   },
   {
     path: "/candidates",
     name: "Candidates",
     icon: "ni ni-single-copy-04 text-blue",
-    component: Candidates,
+    component: withAuth(Candidates),
     layout: "/admin",
   },
   {
     path: "/reference",
     name: "Reference",
     icon: "ni ni-books text-blue",
-    component: Reference,
+    component: withAuth(Reference),
     layout: "/admin",
   },
   {
     path: "/survey",
     name: "Survey",
     icon: "ni ni-books text-blue",
-    component: Survey,
+    component: withAuth(Survey),
     layout: "/admin"
   },
   {
