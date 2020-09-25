@@ -60,7 +60,7 @@ class Login extends Component {
     })
       .then((res) => {
         if (res.status === 200) {
-          this.props.history.push("/");
+          this.props.history.push("/admin/culture");
         } else {
           const error = new Error(res.error);
           throw error;
@@ -88,6 +88,7 @@ class Login extends Component {
                     </InputGroupAddon>
                     <Input
                       placeholder="Email"
+                      name="email"
                       type="email"
                       autoComplete="new-email"
                       onChange={this.handleInputChange}
@@ -105,6 +106,7 @@ class Login extends Component {
                     <Input
                       placeholder="Password"
                       type="password"
+                      name="password"
                       autoComplete="new-password"
                       onChange={this.handleInputChange}
                       required
