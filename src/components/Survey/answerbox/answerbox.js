@@ -32,51 +32,46 @@ function Answerbox(props) {
   if (props.answers) {
     return (
       <div>
-        {hidden !== 0 ? (
-          <>
-            <Row className="justify-content-center">
-              <Answer
-                hideAnswer={hideAnswer}
-                setAnswer={props.setAnswer}
-                setCurrent={props.setCurrent}
-                current={props.current}
-                number={0}
-                answer={props.answers[0].text}
-              />
-            </Row>
-          </>
-        ) : null}
-
-        {hidden !== 1 ? (
-          <>
-            <Row className="justify-content-center">
-              <Answer
-                hideAnswer={hideAnswer}
-                setAnswer={props.setAnswer}
-                setCurrent={props.setCurrent}
-                current={props.current}
-                number={1}
-                answer={props.answers[1].text}
-              />
-            </Row>
-          </>
-        ) : null}
-        {hidden !== 2 ? (
-          <>
-            <Row className="justify-content-center">
-              <Answer
-                hideAnswer={hideAnswer}
-                setAnswer={props.setAnswer}
-                setCurrent={props.setCurrent}
-                current={props.current}
-                number={2}
-                answer={props.answers[2].text}
-              />
-            </Row>
-          </>
-        ) : null}
-        <br />
-        <Row className="px-lg-5">
+        <Row
+          className="justify-content-center"
+          style={{ visibility: hidden === 0 ? "hidden" : "visible" }}
+        >
+          <Answer
+            hideAnswer={hideAnswer}
+            setAnswer={props.setAnswer}
+            setCurrent={props.setCurrent}
+            current={props.current}
+            number={0}
+            answer={props.answers[0].text}
+          />
+        </Row>
+        <Row
+          className="justify-content-center"
+          style={{ visibility: hidden === 1 ? "hidden" : "visible" }}
+        >
+          <Answer
+            hideAnswer={hideAnswer}
+            setAnswer={props.setAnswer}
+            setCurrent={props.setCurrent}
+            current={props.current}
+            number={1}
+            answer={props.answers[1].text}
+          />
+        </Row>
+        <Row
+          className="justify-content-center"
+          style={{ visibility: hidden === 2 ? "hidden" : "visible" }}
+        >
+          <Answer
+            hideAnswer={hideAnswer}
+            setAnswer={props.setAnswer}
+            setCurrent={props.setCurrent}
+            current={props.current}
+            number={2}
+            answer={props.answers[2].text}
+          />
+        </Row>
+        <Row className="justify-content-start">
           <Button onClick={handleBack}>
             {" "}
             <i className="ni ni-bold-left mr-2" /> Back
